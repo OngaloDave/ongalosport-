@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Portfolio Website</title>
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    h1 {
+      margin: 0;
+    }
+    
+    .sidebar {
+      background-color: #f1f1f1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 180px;
+      height: 100%;
+      padding: 20px;
+      z-index: 1;
+      overflow-y: auto;
+    }
+    
+    .sidebar-toggle {
+      display: none;
+    }
+    
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    nav ul li {
+      margin-bottom: 10px;
+    }
+    
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+    }
+    
+    .content {
+      margin-left: 200px;
+      padding: 20px;
+    }
+    
+    section {
+      display: none;
+      margin-bottom: 40px;
+    }
+    
+    section.active {
+      display: block;
+    }
+    
+    section h2 {
+      color: #333;
+    }
+    
+    section p {
+      color: #666;
+    }
+    
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+    
+    @media (max-width: 768px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        position: static;
+      }
+      
+      .sidebar-toggle {
+        display: block;
+        margin-bottom: 10px;
+      }
+      
+      .content {
+        margin-left: 0;
+      }
+    }
+
+    /* Added styles */
+    .home-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .home-text {
+      flex: 1;
+    }
+
+    .home-image {
+      flex: 1;
+      text-align: right;
+    }
+
+    .home-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1> Personal Portfolio </h1>
+  </header>
+
+  <div class="sidebar">
+    <button class="sidebar-toggle" onclick="toggleSidebar()">Toggle Sidebar</button>
+    <nav>
+      <ul>
+        <li><a href="#home" onclick="showSection('home')">Home</a></li>
+        <li><a href="#about" onclick="showSection('about')">About</a></li>
+        <li><a href="#projects" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#services" onclick="showSection('services')">Technical skills</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">Contact</a></li>
+        <li><a href="cv.pdf" download>Download CV</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="content">
+    <section id="home" class="active">
+      <div class="home-content">
+        <div class="home-text">
+		
+          <h2>Welcome to my Portfolio!</h2>
+          <p><h1>I'm David ongalo.Here I showcase my work and skills.<h1></p>
+        </div>
+        <div class="home-image">
+          <img src="dave.jpg" alt="Your Photo">
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <h3>Education Background</h3>
+      <p>I studied Bsc.Information Systems, with bias in software Engineering, project management, and Computer Networks. </p>
+      <p>Eanerd a certifate in Project Execution-project running in Cousera E-learning.</p><br>
+      <h3>Experiences</h3>
+	  <p>I am highly skilled and passionate about gaining expertise in web development and design, that are customers centered. 
+	  I have experience in Java, HTML, CSS, JavaScript, and various web frameworks such as spring boot and Angular.
+	  Furthermore, I have worked with MS 365 and supported server operations.</p>
+	  <p>I have gained relevant work experience both in the industry and in personal projects. In the industry, I have worked with East Africa Breweries Limited and Diamond Trust Bank, both as a technology trainee.</p>
+    </section>
+    
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-item">
+        <div>
+          <h3>Project 1</h3>
+          <p><h4>Integration of Node js and Africas talking  Bulk SMS</h4></br> 
+             Developed a back-end application  in javascript  and its front-end  in  html and  css.</p>
+          <p>This system is able to  send different messages to multiple users at a time. </p>
+          <p>system users only upload a spreadsheet containing the account balances, phone numbers and recipient names only.</p>
+          Technologies used: javascript, node js,html,css and SMS Integration. </br> </div> 
+      </div>
+      
+      <div class="project-item">
+        
+        <div>
+          <h3>Project 2</h3>
+          <p><h4>User management system</h4></br> Technologies used: spring boot,sprng Jpa, and MYSQL as a database.<p>The system is able to 
+		   perfom database CRUD operations i.e. creating a user, updating user details, deleting user from the database and display
+		   user details</p></p>
+        </div>
+      </div>
+    </section>
+    
+    <section id="services">
+      <h2>My competencies</h2>
+      <p>Here are some of my technical skills and competencies:</p>
+      <ul>
+        <li>Communication skills</li>
+		<li>Analytical skills</li>
+		<li>Web Design</li>
+        <li>Front-end and Backend Development </li>
+        <li>Responsive Layouts</li>
+        <li>Website Maintenance</li>
+        <li>Object oriented programming</li>
+      </ul>
+    </section>
+    
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <p>Feel free to get in touch with me. You can reach me at:</p>
+      <ul>
+        <li>Email: davidongalootieno@gmail.com</li>
+        <li>Phone: 0799-325002 / 0762770907</li>
+      </ul>
+    </section>
+  </div>
+  
+  <footer>
+    <p>&copy; 2023 personal Portfolio Website. All rights reserved.</p>
+  </footer>
+  
+  <script>
+    function toggleSidebar() {
+      var sidebar = document.querySelector('.sidebar');
+      sidebar.classList.toggle('active');
+    }
+    
+    function showSection(sectionId) {
+      var sections = document.querySelectorAll('.content section');
+      for (var i = 0; i < sections.length; i++) {
+        sections[i].classList.remove('active');
+      }
+      
+      var targetSection = document.querySelector('#' + sectionId);
+      targetSection.classList.add('active');
+    }
+  </script>
+</body>
+</html>
